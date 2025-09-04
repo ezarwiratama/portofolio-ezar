@@ -1,7 +1,7 @@
-import ProfileCard from "@/components/ProfileCard/ProfileCard";
-import ShinyText from "@/components/ShinyText/ShinyText";
-import TextType from "@/components/TextType/TextType";
-import BlurText from "@/components/BlurText/BlurText";
+import ProfileCard from "@/app/Components/ProfileCard/ProfileCard";
+import ShinyText from "@/app/Components/ShinyText/ShinyText";
+import TextType from "@/app/Components/TextType/TextType";
+import BlurText from "@/app/Components/BlurText/BlurText";
 
 export default function HeroSection() {
   return (

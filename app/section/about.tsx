@@ -1,8 +1,6 @@
-import ScrollFloat from "@/components/ScrollFloat/ScrollFloat";
-import AnimatedContent from "@/components/AnimatedContent/AnimatedContent";
-// import Lanyard from "@/components/Lanyard/Lanyard";
-import BlurText from "@/components/BlurText/BlurText";
-import ShinyText from "@/components/ShinyText/ShinyText";
+import ScrollFloat from "@/app/Components/ScrollFloat/ScrollFloat";
+import AnimatedContent from "@/app/Components/AnimatedContent/AnimatedContent";
+import BlurText from "@/app/Components/BlurText/BlurText";
 
 export default function AboutSection() {
   return (

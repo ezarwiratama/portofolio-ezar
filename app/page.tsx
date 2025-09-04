@@ -1,6 +1,6 @@
 "use client";
 
-import Aurora from "@/components/Aurora/Aurora";
+import Aurora from "@/app/Components/Aurora/Aurora";
 
 import HeroSection from "./section/hero";
 import AboutSection from "./section/about";

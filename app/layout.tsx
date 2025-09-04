@@ -26,14 +26,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-        style={{ backgroundColor: "#18181b", color: "white" }}
+        className={`${geistSans.variable} $ {geistMono.variable} antialiased bg-[#18181b] text-color-white`}
         id="home"
       >
-        <div className="container mx-auto">
-          <Navbar />
-          {children}
-        </div>
+          <div className="container mx-auto">
+            <Navbar />
+            {children}
+          </div>
       </body>
     </html>
   );

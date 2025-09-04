@@ -5,9 +5,9 @@
 	],
 	"includeTests": false,
 	"includeDocs": false,
-	"watermark": true,
+	"watermark": false,
 	"configFiles": {},
 	"paths": {
-		"*": "./src/blocks"
+		"*": "./app/"
 	}
 }
