@@ -4,6 +4,7 @@ import Aurora from "@/app/Components/Aurora/Aurora";
 
 import HeroSection from "./section/hero";
 import AboutSection from "./section/about";
+import "aos/dist/aos.css";
 
 export default function Home() {
   return (
@@ -20,8 +21,7 @@ export default function Home() {
 
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" id="home">
       <div><HeroSection /></div>
-      <div id="about"><AboutSection /></div>  
-        
+      <div id="about"><AboutSection /></div>
       </main>
     </>
   );

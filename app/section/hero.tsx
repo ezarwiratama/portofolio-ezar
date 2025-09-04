@@ -11,7 +11,7 @@ export default function HeroSection() {
           {/* quote section */}
           <div className="flex items-center gap-3 mb-6 bg bg-zinc-800 w-fit py-3 px-4 rounded-2xl">
             <img
-              src="/assets/ezar-2.png"
+              src="/assets/ezar.png"
               className="w-12 h-12 rounded-full border border-white/10 object-cover"
             />
             <q>Move forward or be left behind</q>
@@ -82,7 +82,7 @@ export default function HeroSection() {
             handle="ezarwiratama"
             status="Online"
             contactText="Contact Me"
-            avatarUrl="./assets/ezar-2.png"
+            avatarUrl="./assets/ezar.png"
             showUserInfo={true}
             enableTilt={true}
             enableMobileTilt={false}
