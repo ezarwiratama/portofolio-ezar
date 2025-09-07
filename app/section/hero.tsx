@@ -2,6 +2,8 @@ import ProfileCard from "@/app/Components/ProfileCard/ProfileCard";
 import ShinyText from "@/app/Components/ShinyText/ShinyText";
 import TextType from "@/app/Components/TextType/TextType";
 import BlurText from "@/app/Components/BlurText/BlurText";
+import { HiOutlineDocumentText } from "react-icons/hi";
+import { FiCode } from "react-icons/fi";
 
 export default function HeroSection() {
   return (
@@ -49,11 +51,13 @@ export default function HeroSection() {
           />
 
           <div className="flex items-center sm:gap-4 gap-2">
+            {/* Download CV */}
             <a
               href="./assets/CV.pdf"
               download="Faris_Edrik_Prayoga_CV.pdf"
-              className="font-semibold bg-[#1a1a1a] p-4 px-6 rounded-full border border-gray-700 hover:bg-[#222] transition-colors"
+              className="flex items-center gap-2 font-semibold bg-[#1a1a1a] p-4 px-6 rounded-full border border-gray-700 hover:bg-[#222] transition-colors"
             >
+              <HiOutlineDocumentText className="text-lg" />
               <ShinyText
                 text="Download CV"
                 disabled={false}
@@ -62,10 +66,12 @@ export default function HeroSection() {
               />
             </a>
 
+            {/* Explore Projects */}
             <a
               href="#project"
-              className="font-semibold bg-[#1a1a1a] p-4 px-6 rounded-full border border-gray-700 hover:bg-[#222] transition-colors"
+              className="flex items-center gap-2 font-semibold bg-[#1a1a1a] p-4 px-6 rounded-full border border-gray-700 hover:bg-[#222] transition-colors"
             >
+              <FiCode className="text-lg" />
               <ShinyText
                 text="Explore My Projects"
                 disabled={false}
