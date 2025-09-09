@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Navbar from "@/app/section/navbar";
+import Footer from "@/app/section/footer";
 import "./globals.css";
 import AOSProvider from "./AOSProvider";
 
@@ -27,13 +28,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[#18181b] text-white`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         id="home"
       >
         <div className="container mx-auto px-6">
           <Navbar />
           <AOSProvider>{children}</AOSProvider>
         </div>
+        <Footer />
       </body>
     </html>
   );

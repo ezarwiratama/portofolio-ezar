@@ -6,9 +6,9 @@ import HeroSection from "./section/hero";
 import AboutSection from "./section/about";
 import ProjectSection from "./section/project";
 import ContactSection from "./section/contact";
-import experienceSection from "./section/experience";
-import "aos/dist/aos.css";
 import ExperienceSection from "./section/experience";
+import Footer from "./section/footer";
+import "aos/dist/aos.css";
 
 export default function Home() {
   return (
