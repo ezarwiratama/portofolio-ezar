@@ -54,7 +54,7 @@ export default function ProjectSection() {
       },
     ],
     certificates: [
-      { id: 1, image: "/assets/tools/cert1.png" },
+      { id: 1, image: "/assets/cert/cert1.jpg" },
       { id: 2, image: "/assets/tools/cert2.png" },
     ],
     techstack: [
@@ -132,7 +132,7 @@ export default function ProjectSection() {
                 ? "flex flex-col items-start"
                 : "flex flex-col items-center"
             }`}
-            spotlightColor="rgba(255, 0, 251, 0.2)"
+            spotlightColor="rgba(134, 3, 132, 0.2)"
           >
             {/* Gambar */}
             <Image
