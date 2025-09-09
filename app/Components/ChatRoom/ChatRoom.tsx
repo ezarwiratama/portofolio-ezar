@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 import { auth, loginWithGoogle, logout, db } from "../../firebase";
 import { onAuthStateChanged, User } from "firebase/auth";
 import {
@@ -9,7 +10,8 @@ import {
   onSnapshot,
   query,
   orderBy,
-  serverTimestamp
+  serverTimestamp,
+  Timestamp,
 } from "firebase/firestore";
 
 interface Message {
@@ -18,7 +20,7 @@ interface Message {
   uid: string;
   displayName: string;
   photoURL: string;
-  createdAt?: any;
+  createdAt?: Timestamp;
 }
 
 export default function ChatRoom() {
@@ -67,7 +69,13 @@ export default function ChatRoom() {
       {user && (
         <div className="flex justify-between items-center mb-4 border-b border-gray-700 pb-3">
           <div className="flex items-center gap-3">
-            <img src={user.photoURL ?? ""} alt="avatar" className="w-10 h-10 rounded-full" />
+            <Image
+              src={user.photoURL ?? "https://via.placeholder.com/40"}
+              alt="avatar"
+              width={40}
+              height={40}
+              className="w-10 h-10 rounded-full"
+            />
             <span className="text-white font-semibold">{user.displayName}</span>
           </div>
           <button
@@ -87,9 +95,11 @@ export default function ChatRoom() {
             className={`flex gap-2 ${msg.uid === user?.uid ? "justify-end" : "justify-start"}`}
           >
             {msg.uid !== user?.uid && (
-              <img
+              <Image
                 src={msg.photoURL || "https://via.placeholder.com/40"}
                 alt="avatar"
+                width={32}
+                height={32}
                 className="w-8 h-8 rounded-full"
               />
             )}
@@ -102,9 +112,11 @@ export default function ChatRoom() {
               <div>{msg.text}</div>
             </div>
             {msg.uid === user?.uid && (
-              <img
+              <Image
                 src={msg.photoURL || "https://via.placeholder.com/40"}
                 alt="avatar"
+                width={32}
+                height={32}
                 className="w-8 h-8 rounded-full"
               />
             )}
@@ -135,10 +147,11 @@ export default function ChatRoom() {
             onClick={loginWithGoogle}
             className="flex items-center gap-3 bg-white text-gray-800 px-5 py-2 rounded-full shadow hover:bg-gray-200 transition"
           >
-            <img
+            <Image
               src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg"
               alt="Google logo"
-              className="w-5 h-5"
+              width={20}
+              height={20}
             />
             Login with Google
           </button>
