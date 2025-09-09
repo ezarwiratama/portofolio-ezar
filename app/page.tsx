@@ -16,7 +16,7 @@ export default function Home() {
       {/* background */}
       <div className="absolute top-0 left-0 w-full h-full -z-10 ">
         <Aurora
-          colorStops={["#7F7FD5", "#86A8E7", "#91EAE4"]}
+          colorStops={["#7F7FD5", "#1F97A6", "#91EAE4"]}
           blend={0.5}
           amplitude={1.0}
           speed={0.5}
