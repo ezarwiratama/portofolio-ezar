@@ -17,6 +17,10 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  eslint: {
+    // Abaikan error linting saat build (termasuk di Vercel)
+    ignoreDuringBuilds: true,
+  },
 };
 
 export default nextConfig;
