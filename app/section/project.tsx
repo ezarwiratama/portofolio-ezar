@@ -34,43 +34,53 @@ export default function ProjectSection() {
   // ✅ 3. Dummy data
   const dummyData: Record<TabKey, Item[]> = {
     projects: [
-      {
-        id: 1,
-        title: "Weather App",
-        desc: "A weather forecasting app using React & OpenWeather API",
-        image: "/assets/tools/reactjs.png",
-      },
-      {
-        id: 2,
-        title: "Todo App",
-        desc: "Task management app with drag & drop support",
-        image: "/assets/tools/nodejs.png",
-      },
-      {
-        id: 3,
-        title: "E-commerce Store",
-        desc: "Fullstack store with cart, payment, and admin dashboard",
-        image: "/assets/tools/mysql.png",
-      },
+      // {
+      //   id: 1,
+      //   title: "Weather App",
+      //   desc: "A weather forecasting app using React & OpenWeather API",
+      //   image: "/assets/tools/reactjs.png",
+      // },
+      // {
+      //   id: 2,
+      //   title: "Todo App",
+      //   desc: "Task management app with drag & drop support",
+      //   image: "/assets/tools/nodejs.png",
+      // },
+      // {
+      //   id: 3,
+      //   title: "E-commerce Store",
+      //   desc: "Fullstack store with cart, payment, and admin dashboard",
+      //   image: "/assets/tools/mysql.png",
+      // },
     ],
     certificates: [
       { id: 1, image: "/assets/cert/cert1.jpg" },
-      { id: 2, image: "/assets/tools/cert2.png" },
+      // { id: 2, image: "/assets/tools/cert2.png" },
     ],
     techstack: [
+      // Frontend
       { id: 1, title: "React.js", image: "/assets/tools/reactjs.png" },
-      { id: 2, title: "Node.js", image: "/assets/tools/nodejs.png" },
-      { id: 3, title: "MySQL", image: "/assets/tools/mysql.png" },
-      { id: 4, title: "Tailwind", image: "/assets/tools/tailwind.png" },
-      { id: 5, title: "Figma", image: "/assets/tools/figma.png" },
-      { id: 6, title: "Next.js", image: "/assets/tools/nextjs.png" },
-      { id: 7, title: "PHP", image: "/assets/tools/php.png" },
-      { id: 8, title: "html5", image: "/assets/tools/html.png" },
-      { id: 9, title: "CSS3", image: "/assets/tools/css.png" },
-      { id: 10, title: "JavaScript", image: "/assets/tools/js.png" },
-      { id: 11, title: "Canva", image: "/assets/tools/canva.png" },
-      { id: 12, title: "Github", image: "/assets/tools/github.png" },
-      { id: 13, title: "Typescript", image: "/assets/tools/ts.png" },
+      { id: 2, title: "Next.js", image: "/assets/tools/nextjs.png" },
+      { id: 3, title: "Tailwind", image: "/assets/tools/tailwind.png" },
+      { id: 4, title: "HTML5", image: "/assets/tools/html.png" },
+      { id: 5, title: "CSS3", image: "/assets/tools/css.png" },
+      { id: 6, title: "JavaScript", image: "/assets/tools/js.png" },
+      { id: 7, title: "TypeScript", image: "/assets/tools/ts.png" },
+
+      // Backend
+      { id: 8, title: "Node.js", image: "/assets/tools/nodejs.png" },
+      { id: 9, title: "PHP", image: "/assets/tools/php.png" },
+
+      // Database
+      { id: 10, title: "MySQL", image: "/assets/tools/mysql.png" },
+
+      // Design
+      { id: 11, title: "Figma", image: "/assets/tools/figma.png" },
+      { id: 12, title: "Canva", image: "/assets/tools/canva.png" },
+
+      // Tools
+      { id: 13, title: "Github", image: "/assets/tools/github.png" },
+      { id: 14, title: "VSCode", image: "/assets/tools/vscode.png" },
     ],
   };
 
