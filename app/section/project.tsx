@@ -19,16 +19,16 @@ interface Item {
 }
 
 export default function ProjectSection() {
-  const [active, setActive] = useState<TabKey>("projects");
+  const [active, setActive] = useState<TabKey>("techstack");
 
   const tabs = [
+    { id: "techstack", label: "Tech Stack", icon: <FaCogs size={18} /> },
     { id: "projects", label: "Projects", icon: <FaCode size={18} /> },
     {
       id: "certificates",
       label: "Certificates",
       icon: <PiCertificateFill size={18} />,
     },
-    { id: "techstack", label: "Tech Stack", icon: <FaCogs size={18} /> },
   ] as const;
 
   // ✅ 3. Dummy data
