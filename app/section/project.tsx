@@ -61,26 +61,26 @@ export default function ProjectSection() {
       // Frontend
       { id: 1, title: "React.js", image: "/assets/tools/reactjs.png" },
       { id: 2, title: "Next.js", image: "/assets/tools/nextjs.png" },
-      { id: 3, title: "Tailwind", image: "/assets/tools/tailwind.png" },
-      { id: 4, title: "HTML5", image: "/assets/tools/html.png" },
-      { id: 5, title: "CSS3", image: "/assets/tools/css.png" },
-      { id: 6, title: "JavaScript", image: "/assets/tools/js.png" },
-      { id: 7, title: "TypeScript", image: "/assets/tools/ts.png" },
-
+      { id: 3, title: "Laravel", image: "/assets/tools/laravel.png" },
+      { id: 4, title: "Angular", image: "/assets/tools/angular.png" },
+      { id: 5, title: "Tailwind", image: "/assets/tools/tailwind.png" },
+      { id: 6, title: "HTML5", image: "/assets/tools/html.png" },
+      { id: 7, title: "CSS3", image: "/assets/tools/css.png" },
+      { id: 8, title: "JavaScript", image: "/assets/tools/js.png" },
+      { id: 9, title: "TypeScript", image: "/assets/tools/ts.png" },
       // Backend
-      { id: 8, title: "Node.js", image: "/assets/tools/nodejs.png" },
-      { id: 9, title: "PHP", image: "/assets/tools/php.png" },
-
+      { id: 10, title: "Node.js", image: "/assets/tools/nodejs.png" },
+      { id: 11, title: "PHP", image: "/assets/tools/php.png" },
       // Database
-      { id: 10, title: "MySQL", image: "/assets/tools/mysql.png" },
-
+      { id: 12, title: "MySQL", image: "/assets/tools/mysql.png" },
+      { id: 13, title: "MongoDB", image: "/assets/tools/mongodb.png" },
+      { id: 14, title: "Firebase", image: "/assets/tools/firebase.png" },
       // Design
-      { id: 11, title: "Figma", image: "/assets/tools/figma.png" },
-      { id: 12, title: "Canva", image: "/assets/tools/canva.png" },
-
+      { id: 15, title: "Figma", image: "/assets/tools/figma.png" },
+      { id: 16, title: "Canva", image: "/assets/tools/canva.png" },
       // Tools
-      { id: 13, title: "Github", image: "/assets/tools/github.png" },
-      { id: 14, title: "VSCode", image: "/assets/tools/vscode.png" },
+      { id: 17, title: "Github", image: "/assets/tools/github.png" },
+      { id: 18, title: "VSCode", image: "/assets/tools/vscode.png" },
     ],
   };
 
