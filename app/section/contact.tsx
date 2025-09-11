@@ -22,7 +22,7 @@ export default function ContactSection() {
         </p>
       </div>
 
-      <div className="flex flex-col md:flex-row gap-8 mb-15">
+      <div className="flex flex-col md:flex-row gap-8 mb-30">
         {/* Chat Room di kiri */}
         <div
           className="flex-1 bg-zinc-800 p-6 rounded-md"
