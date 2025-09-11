@@ -35,15 +35,41 @@ export default function ChatRoom() {
   }, []);
 
   // Ambil pesan real-time
+  // useEffect(() => {
+  //   const q = query(collection(db, "messages"), orderBy("createdAt"));
+  //   const unsub = onSnapshot(q, (snapshot) => {
+  //     setMessages(
+  //       snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() } as Message))
+  //     );
+  //   });
+  //   return () => unsub();
+  // }, []);
+
+    // Ambil pesan real-time hanya kalau user sudah login
   useEffect(() => {
-    const q = query(collection(db, "messages"), orderBy("createdAt"));
+    if (!user) return; // kalau belum login, jangan query
+
+    const q = query(
+      collection(db, "messages"),
+      orderBy("createdAt", "asc")
+    );
+
     const unsub = onSnapshot(q, (snapshot) => {
       setMessages(
-        snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() } as Message))
+        snapshot.docs.map((doc) => {
+          const data = doc.data();
+          return {
+            id: doc.id,
+            ...data,
+            createdAt: data.createdAt ?? null,
+          } as Message;
+        })
       );
     });
+
     return () => unsub();
-  }, []);
+  }, [user]); // jalankan ulang kalau user berubah
+
 
   // Kirim pesan
   const sendMessage = async (e: React.FormEvent<HTMLFormElement>) => {
