@@ -52,7 +52,7 @@ export default function HeroSection() {
 
           <div className="flex items-center sm:gap-4 gap-2">
             {/* Download CV */}
-            <a
+            {/* <a
               href="./assets/CV.pdf"
               download="Faris_Edrik_Prayoga_CV.pdf"
               className="flex items-center gap-2 font-semibold bg-[#1a1a1a] p-4 px-6 rounded-full border border-gray-700 hover:bg-[#222] transition-colors"
@@ -64,7 +64,7 @@ export default function HeroSection() {
                 speed={3}
                 className="custom-class"
               />
-            </a>
+            </a> */}
 
             {/* Explore Projects */}
             <a
