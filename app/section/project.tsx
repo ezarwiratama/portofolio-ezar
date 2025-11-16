@@ -34,12 +34,12 @@ export default function ProjectSection() {
 
   const dummyData: Record<TabKey, Item[]> = {
     projects: [
-      // {
-      //   id: 1,
-      //   title: "Weather App",
-      //   desc: "A weather forecasting app using React & OpenWeather API",
-      //   image: "/assets/tools/reactjs.png",
-      // },
+      {
+        id: 1,
+        title: "Weather App",
+        desc: "A weather forecasting app using React & OpenWeather API",
+        image: "/assets/tools/reactjs.png",
+      },
       // {
       //   id: 2,
       //   title: "Todo App",
