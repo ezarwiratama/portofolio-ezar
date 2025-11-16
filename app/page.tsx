@@ -7,8 +7,6 @@ import AboutSection from "./section/about";
 import ProjectSection from "./section/project";
 import ContactSection from "./section/contact";
 import ExperienceSection from "./section/experience";
-import Footer from "./section/footer";
-import "aos/dist/aos.css";
 
 export default function Home() {
   return (
@@ -24,11 +22,19 @@ export default function Home() {
       </div>
 
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" id="home">
-      <div><HeroSection /></div>
-      <div id="about"><AboutSection /></div>
-      {/* <div id="experience"><ExperienceSection /></div> */}
-      <div id="project"><ProjectSection/></div>
-      <div id="contact"><ContactSection/></div>
+        <div>
+          <HeroSection />
+        </div>
+        <div id="about">
+          <AboutSection />
+        </div>
+        {/* <div id="experience"><ExperienceSection /></div> */}
+        <div id="project">
+          <ProjectSection />
+        </div>
+        <div id="contact">
+          <ContactSection />
+        </div>
       </main>
     </>
   );

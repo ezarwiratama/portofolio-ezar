@@ -5,6 +5,7 @@ declare module "*.glb" {
   export default value;
 }
 declare module '*.png';
+declare module '*.css';
 
 declare module 'meshline' {
   export const MeshLineGeometry: any;

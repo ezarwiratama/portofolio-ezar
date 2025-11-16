@@ -1,10 +1,13 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import ScrollFloat from "../Components/ScrollFloat/ScrollFloat";
 import SpotlightCard from "../Components/SpotlightCard/SpotlightCard";
+import ShinyText from "../Components/ShinyText/ShinyText";
 import { FaCode } from "react-icons/fa";
 import { PiCertificateFill } from "react-icons/pi";
 import { FaCogs } from "react-icons/fa";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import Image from "next/image";
 
 // ✅ 1. Buat type untuk tab key
@@ -84,21 +87,24 @@ export default function ProjectSection() {
     ],
   };
 
+  useEffect(() => {
+    AOS.init({
+      offset: 10,
+    });
+  }, []);
+
   return (
     <div>
       {/* Title */}
-      <div className="text-center text-4xl mb-10 mt-20">
-        <ScrollFloat
-          animationDuration={1}
-          ease="back.inOut(2)"
-          scrollStart="center bottom+=50%"
-          scrollEnd="bottom bottom-=40%"
-          stagger={0.03}
-          textClassName="font-bold"
+      <div className="text-center text-5xl mb-20 mt-20">
+        <h1
+          className="font-bold"
+          data-aos="fade-up"
+          data-aos-anchor-placement="top-bottom"
         >
           Portofolio Showcase
-        </ScrollFloat>
-        <p className="mx-auto max-w-2xl w-4/5 text-base leading-relaxed opacity-50 text-center">
+        </h1>
+        <p className="mx-auto max-w-2xl w-4/5 text-base leading-relaxed opacity-50 text-center mt-10">
           Discover my growth through projects, skills, and achievements. Every
           step reflects my passion for technology and lifelong learning.
         </p>
@@ -111,12 +117,12 @@ export default function ProjectSection() {
             <button
               key={tab.id}
               onClick={() => setActive(tab.id as TabKey)}
-              className={`flex flex-1 items-center justify-center gap-3 px-10 py-5 text-lg rounded-xl transition-all duration-300 cursor-pointer
-                ${
-                  active === tab.id
-                    ? "bg-gradient-to-r from-indigo-600 to-purple-600 text-white shadow-md"
-                    : "text-gray-300 hover:text-white hover:bg-gray-700/40"
-                }`}
+              className={`flex flex-1 items-center justify-center gap-3 px-4 py-4 md:px-10 md:py-5 text-lg rounded-xl transition-all duration-300 cursor-pointer
+              ${
+                active === tab.id
+                  ? "bg-gradient-to-r from-indigo-600 to-purple-600 text-white shadow-md"
+                  : "text-gray-300 hover:text-white hover:bg-gray-700/40"
+              }`}
             >
               {tab.icon}
               <span className="font-semibold">{tab.label}</span>
@@ -148,8 +154,8 @@ export default function ProjectSection() {
             <Image
               src={item.image}
               alt={item.title || "Image"}
-              width={80}
-              height={80}
+              width={active === "techstack" ? 64 : 80}
+              height={active === "techstack" ? 64 : 80}
               className="mb-4 object-contain"
             />
 
@@ -164,9 +170,12 @@ export default function ProjectSection() {
             )}
 
             {active === "techstack" && (
-              <h3 className="text-base font-medium text-center">
-                {item.title}
-              </h3>
+              <ShinyText
+                text={item.title}
+                disabled={false}
+                speed={3}
+                className="text-base font-semibold block"
+              />
             )}
           </SpotlightCard>
         ))}
