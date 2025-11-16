@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Navbar from "@/app/section/navbar";
+import NewNavbar from "@/app/section/newNavbar";
 import Footer from "@/app/section/footer";
 import "./globals.css";
 import AOSProvider from "./AOSProvider";
@@ -32,7 +33,7 @@ export default function RootLayout({
         id="home"
       >
         <div className="container mx-auto px-6">
-          <Navbar />
+          <NewNavbar />
           <AOSProvider>{children}</AOSProvider>
         </div>
         <Footer />
