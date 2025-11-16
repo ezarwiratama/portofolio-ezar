@@ -1,5 +1,6 @@
 import React from "react";
 import { SiReact } from "react-icons/si";
+import { FaGlasses } from "react-icons/fa";
 
 export default function newNavbar() {
   return (
@@ -20,7 +21,8 @@ export default function newNavbar() {
       >
         {/* Sisi Kiri: Logo dan Teks */}
         <div className="flex items-center gap-3 text-white">
-          <SiReact size={24} />
+          {/* <SiReact size={24} /> */}
+          <FaGlasses size={24} />
           <span className="text-xl font-semibold">Ezar Hardin</span>
         </div>
 

@@ -1,6 +1,6 @@
 "use client";
+
 import { useState, useEffect } from "react";
-import ScrollFloat from "../Components/ScrollFloat/ScrollFloat";
 import SpotlightCard from "../Components/SpotlightCard/SpotlightCard";
 import ShinyText from "../Components/ShinyText/ShinyText";
 import { FaCode } from "react-icons/fa";
@@ -10,10 +10,8 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import Image from "next/image";
 
-// ✅ 1. Buat type untuk tab key
 type TabKey = "projects" | "certificates" | "techstack";
 
-// ✅ 2. Buat type untuk item
 interface Item {
   id: number;
   title?: string;
@@ -34,7 +32,6 @@ export default function ProjectSection() {
     },
   ] as const;
 
-  // ✅ 3. Dummy data
   const dummyData: Record<TabKey, Item[]> = {
     projects: [
       // {

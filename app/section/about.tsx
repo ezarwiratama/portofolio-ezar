@@ -2,11 +2,8 @@
 
 import { useEffect } from "react";
 
-import ScrollFloat from "@/app/Components/ScrollFloat/ScrollFloat";
-import AnimatedContent from "@/app/Components/AnimatedContent/AnimatedContent";
 import BlurText from "@/app/Components/BlurText/BlurText";
 import Lanyard from "@/app/Components/Lanyard/Lanyard";
-import ShinyText from "../Components/ShinyText/ShinyText";
 import SocialLinks from "../Components/SocialLinks/SocialLinks";
 import AOS from "aos";
 import "aos/dist/aos.css";
