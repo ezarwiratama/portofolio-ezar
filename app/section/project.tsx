@@ -40,18 +40,24 @@ export default function ProjectSection() {
         desc: "A weather forecasting app using React & OpenWeather API",
         image: "/assets/tools/reactjs.png",
       },
-      // {
-      //   id: 2,
-      //   title: "Todo App",
-      //   desc: "Task management app with drag & drop support",
-      //   image: "/assets/tools/nodejs.png",
-      // },
-      // {
-      //   id: 3,
-      //   title: "E-commerce Store",
-      //   desc: "Fullstack store with cart, payment, and admin dashboard",
-      //   image: "/assets/tools/mysql.png",
-      // },
+      {
+        id: 2,
+        title: "NOC Dashboard by Telkomsel",
+        desc: "Centralized, real-time view of a network's health and performance, allowing technicians to monitor, manage, and quickly resolve issues.",
+        image: "/assets/tools/angular.png",
+      },
+      {
+        id: 3,
+        title: "Website Pondok Pesantren Al-Anwar Pakijangan",
+        desc: "Website for Pondok Pesantren Al-Anwar Pakijangan built with Laravel",
+        image: "/assets/tools/laravel.png",
+      },
+      {
+        id: 4,
+        title: "Aduan: Website Pengaduan Masyarakat",
+        desc: "Website for public complaints management system built with React.js",
+        image: "/assets/tools/reactjs.png",
+      },
     ],
     certificates: [
       { id: 1, image: "/assets/cert/cert1.jpg" },
