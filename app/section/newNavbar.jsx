@@ -28,7 +28,7 @@ export default function newNavbar() {
 
         {/* Sisi Kanan: Links */}
         <div className="flex items-center gap-6 text-white">
-          <a href="#home" className="font-medium hover:text-gray-200">
+          <a href="#" className="font-medium hover:text-gray-200">
             Home
           </a>
           <a href="#about" className="font-medium hover:text-gray-200">

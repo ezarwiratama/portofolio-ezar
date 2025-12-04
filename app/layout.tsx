@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Navbar from "@/app/section/navbar";
 import NewNavbar from "@/app/section/newNavbar";
+import PreLoader from "@/app/section/preLoader";
 import Footer from "@/app/section/footer";
 import "./globals.css";
 import AOSProvider from "./AOSProvider";
@@ -32,6 +33,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         id="home"
       >
+          <PreLoader />
         <div className="container mx-auto px-6">
           <NewNavbar />
           <AOSProvider>{children}</AOSProvider>
