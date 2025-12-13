@@ -1,6 +1,7 @@
 import type { NextConfig } from "next";
 
-const nextConfig: NextConfig = {
+// UBAH DARI ': NextConfig' MENJADI ': any'
+const nextConfig: any = {
   images: {
     remotePatterns: [
       {
@@ -18,7 +19,6 @@ const nextConfig: NextConfig = {
     ],
   },
   eslint: {
-    // Abaikan error linting saat build (termasuk di Vercel)
     ignoreDuringBuilds: true,
   },
 };
