@@ -22,7 +22,7 @@ export default function ProjectSection() {
   const [active, setActive] = useState<TabKey>("techstack");
 
   const tabs = [
-    { id: "techstack", label: "Tech Stack", icon: <FaCogs size={20} /> }, // Size icon disesuaikan sedikit
+    { id: "techstack", label: "Tech Stack", icon: <FaCogs size={20} /> },
     { id: "projects", label: "Projects", icon: <FaCode size={20} /> },
     {
       id: "certificates",
@@ -107,13 +107,11 @@ export default function ProjectSection() {
       : dummyData[active];
 
   return (
-    // Tambahkan padding-x (px-4) pada container utama agar tidak mentok pinggir di HP
-    <div className="px-4 md:px-0"> 
+    <div className="px-4 md:px-0">
       {/* Title */}
       <div className="text-center mb-10 mt-10 md:mb-20 md:mt-20">
-        {/* Ubah text-5xl menjadi text-3xl di mobile agar muat */}
         <h1
-          className="font-bold text-3xl md:text-5xl" 
+          className="font-bold text-3xl md:text-5xl"
           data-aos="fade-up"
           data-aos-anchor-placement="top-bottom"
         >
@@ -125,7 +123,7 @@ export default function ProjectSection() {
         </p>
       </div>
 
-      {/* Tabs - BAGIAN UTAMA PERBAIKAN */}
+      {/* Tabs */}
       <div className="flex justify-center mt-8">
         <div className="flex w-full max-w-5xl bg-gradient-to-r from-[#2a2143] to-[#111827] p-1 md:p-2 rounded-2xl shadow-lg">
           {tabs.map((tab) => (
@@ -138,7 +136,6 @@ export default function ProjectSection() {
                 gap-2 md:gap-3 
                 px-2 py-3 md:px-10 md:py-5 
                 rounded-xl transition-all duration-300 cursor-pointer
-                /* Mobile: Flex Column (Icon atas, text bawah), Desktop: Row */
                 flex-col md:flex-row 
                 ${
                   active === tab.id
@@ -147,12 +144,7 @@ export default function ProjectSection() {
                 }
               `}
             >
-              {/* Icon */}
-              <div className="text-xl md:text-lg">
-                 {tab.icon}
-              </div>
-              
-              {/* Text Label */}
+              <div className="text-xl md:text-lg">{tab.icon}</div>
               <span className="font-semibold text-xs md:text-lg mt-1 md:mt-0">
                 {tab.label}
               </span>
@@ -166,14 +158,13 @@ export default function ProjectSection() {
         className={`mt-8 md:mt-12 max-w-6xl mx-auto grid gap-6 
           ${
             active === "techstack"
-              ? "grid-cols-3 md:grid-cols-3 lg:grid-cols-6" // Ubah mobile jadi 3 kolom agar icon kecil tidak terlalu besar sendiri
+              ? "grid-cols-3 md:grid-cols-3 lg:grid-cols-6"
               : "grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
           }`}
       >
         {displayedItems.map((item) => (
           <SpotlightCard
             key={item.id}
-            // Hapus padding besar di mobile (p-6) ganti jadi p-4
             className={`custom-spotlight-card p-4 md:p-6 rounded-2xl shadow-lg cursor-pointer hover:scale-[1.02] transition-transform ${
               active === "projects"
                 ? "flex flex-col items-start"
@@ -181,23 +172,28 @@ export default function ProjectSection() {
             }`}
             spotlightColor="rgba(134, 3, 132, 0.2)"
           >
-            {/* Gambar */}
+            {/* GAMBAR (BAGIAN YG DIUBAH) */}
             <Image
               src={item.image}
               alt={item.title || "Image"}
-              width={active === "techstack" ? 50 : 80} // Kecilkan dikit di mobile
-              height={active === "techstack" ? 50 : 80}
-              className="mb-4 object-contain"
+              // width & height di sini untuk Source Resolution (Kualitas)
+              width={80} 
+              height={80}
+              // className di sini untuk Tampilan Ukuran (Size)
+              className={`object-contain mb-4 ${
+                active === "techstack"
+                  ? "w-16 h-16 md:w-16 md:h-16" // Mobile: w-16 (64px) - Besar & Jelas
+                  : "w-full h-40 md:w-20 md:h-20" // Projects: sesuaikan
+              }`}
             />
 
-            {/* Kondisional berdasarkan tab */}
             {active === "projects" && (
               <div className="w-full">
                 <h3 className="text-lg md:text-xl font-semibold mb-2 text-left">
                   {item.title}
                 </h3>
                 <p className="text-sm md:text-base text-gray-400 text-left">
-                    {item.desc}
+                  {item.desc}
                 </p>
               </div>
             )}
@@ -207,7 +203,6 @@ export default function ProjectSection() {
                 text={item.title || ""}
                 disabled={false}
                 speed={3}
-                // Kecilkan text techstack di mobile
                 className="text-xs md:text-base font-semibold block"
               />
             )}
