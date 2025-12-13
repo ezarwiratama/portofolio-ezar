@@ -155,10 +155,10 @@ export default function ProjectSection() {
 
       {/* Content */}
       <div
-        className={`mt-8 md:mt-12 max-w-6xl mx-auto grid gap-6 
+        className={`mt-8 md:mt-12 max-w-6xl mx-auto grid gap-4 md:gap-6 
           ${
             active === "techstack"
-              ? "grid-cols-3 md:grid-cols-3 lg:grid-cols-6"
+              ? "grid-cols-2 md:grid-cols-3 lg:grid-cols-6" // UBAH KE 2 KOLOM DI MOBILE
               : "grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
           }`}
       >
@@ -172,18 +172,16 @@ export default function ProjectSection() {
             }`}
             spotlightColor="rgba(134, 3, 132, 0.2)"
           >
-            {/* GAMBAR (BAGIAN YG DIUBAH) */}
+            {/* GAMBAR */}
             <Image
               src={item.image}
               alt={item.title || "Image"}
-              // width & height di sini untuk Source Resolution (Kualitas)
-              width={80} 
-              height={80}
-              // className di sini untuk Tampilan Ukuran (Size)
+              width={100} // Resolusi sumber besar
+              height={100}
               className={`object-contain mb-4 ${
                 active === "techstack"
-                  ? "w-16 h-16 md:w-16 md:h-16" // Mobile: w-16 (64px) - Besar & Jelas
-                  : "w-full h-40 md:w-20 md:h-20" // Projects: sesuaikan
+                  ? "w-20 h-20 md:w-20 md:h-20" // Ukuran JUMBO (80px) untuk Mobile & Desktop
+                  : "w-full h-40 md:w-20 md:h-20" 
               }`}
             />
 
@@ -203,7 +201,7 @@ export default function ProjectSection() {
                 text={item.title || ""}
                 disabled={false}
                 speed={3}
-                className="text-xs md:text-base font-semibold block"
+                className="text-sm md:text-base font-semibold block text-center"
               />
             )}
           </SpotlightCard>
