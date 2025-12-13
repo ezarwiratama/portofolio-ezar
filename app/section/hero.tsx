@@ -8,27 +8,33 @@ import { FiCode } from "react-icons/fi";
 export default function HeroSection() {
   return (
     <>
-      <div className="hero grid md:grid-cols-2 items-center pt-10 xl:gap-0 gap-6 grid-cols-1 mb-12">
-        <div className="animate__animated animate__fadeInUp animate__delay-3s">
-          {/* quote section */}
-          <div className="flex items-center gap-3 mb-6 bg bg-zinc-800 w-fit py-3 px-4 rounded-2xl">
+      <div className="hero grid md:grid-cols-2 items-center pt-6 md:pt-10 xl:gap-0 gap-8 grid-cols-1 mb-12 md:mb-24 px-4 md:px-0 relative overflow-visible">
+        {/* Kolom Kiri: Text Content */}
+        <div className="animate__animated animate__fadeInUp animate__delay-3s z-10 order-1 md:order-1">
+          {/* Quote Section */}
+          <div className="flex items-center gap-3 mb-6 bg-zinc-800/50 backdrop-blur-sm w-fit py-2 px-4 rounded-2xl border border-white/5 mx-auto md:mx-0">
             <img
               src="/assets/ezar.png"
-              className="w-12 h-12 rounded-full border border-white/10 object-cover"
+              className="w-10 h-10 rounded-full border border-white/10 object-cover"
+              alt="Profile"
             />
-            <q>Move forward or be left behind</q>
+            <q className="text-sm md:text-base text-gray-300">
+              Move forward or be left behind
+            </q>
           </div>
-          {/* typograph */}
-          <h1 className="text-5xl font-bold mb-6">
+
+          {/* Typograph Name */}
+          <h1 className="text-3xl md:text-5xl font-bold mb-4 md:mb-6 text-center md:text-left">
             <ShinyText
               text="Hi, I'm Ezar Hardin Wiratama"
               disabled={false}
               speed={3}
-              className="custom-class"
+              className="leading-tight"
             />
           </h1>
-          {/* role */}
-          <h1 className="text-3xl font-semibold mb-6">
+
+          {/* Role Typing Effect */}
+          <h2 className="text-2xl md:text-3xl font-semibold mb-6 text-center md:text-left h-[40px] md:h-auto">
             <TextType
               text={[
                 "Fullstack Developer",
@@ -40,60 +46,71 @@ export default function HeroSection() {
               showCursor={true}
               cursorCharacter="|"
             />
-          </h1>
+          </h2>
 
+          {/* Description */}
           <BlurText
             text="A skilled and adaptable Full Stack Developer with expertise in building and maintaining web applications from front to back. I am passionate about creating efficient and user-friendly digital solutions."
             delay={150}
             animateBy="words"
             direction="top"
-            className=" mb-6"
+            className="mb-8 text-center md:text-left text-gray-400 leading-relaxed max-w-lg mx-auto md:mx-0"
           />
 
-          <div className="flex items-center sm:gap-4 gap-2">
+          {/* Buttons */}
+          <div className="flex flex-col sm:flex-row items-center gap-4 justify-center md:justify-start">
             {/* Download CV */}
             <a
               href="./assets/CV.pdf"
-              // download="Ezar_CV.pdf"
-              className="flex items-center gap-2 font-semibold bg-[#1a1a1a] p-4 px-6 rounded-full border border-gray-700 hover:bg-[#222] transition-colors"
+              className="group flex items-center justify-center gap-3 font-semibold bg-[#1a1a1a] p-3 px-6 rounded-full border border-gray-700 hover:bg-[#222] hover:border-gray-500 transition-all active:scale-95 w-full sm:w-auto"
             >
-              <HiOutlineDocumentText className="text-lg" />
-              <ShinyText
-                text="Download CV"
-                disabled={false}
-                speed={3}
-                className="custom-class"
-              />
+              <HiOutlineDocumentText className="text-xl text-white group-hover:text-gray-300 transition-colors" />
+              <div className="relative top-[1px]">
+                 <ShinyText
+                  text="Download CV"
+                  disabled={false}
+                  speed={3}
+                  className="whitespace-nowrap"
+                />
+              </div>
             </a>
 
             {/* Explore Projects */}
             <a
               href="#project"
-              className="flex items-center gap-2 font-semibold bg-[#1a1a1a] p-4 px-6 rounded-full border border-gray-700 hover:bg-[#222] transition-colors"
+              className="group flex items-center justify-center gap-3 font-semibold bg-[#1a1a1a] p-3 px-6 rounded-full border border-gray-700 hover:bg-[#222] hover:border-gray-500 transition-all active:scale-95 w-full sm:w-auto"
             >
-              <FiCode className="text-lg" />
-              <ShinyText
-                text="Explore My Projects"
-                disabled={false}
-                speed={3}
-                className="custom-class"
-              />
+              <FiCode className="text-xl text-white group-hover:text-gray-300 transition-colors" />
+              <div className="relative top-[1px]">
+                <ShinyText
+                  text="Explore My Projects"
+                  disabled={false}
+                  speed={3}
+                  className="whitespace-nowrap"
+                />
+              </div>
             </a>
           </div>
         </div>
-        <div className="md:ml-auto animate__animated animate__fadeInUp animate__delay-4s">
-          <ProfileCard
-            name="Ezar Hardin W"
-            title="Fullstack Developer"
-            handle="ezarwiratama"
-            status="Online"
-            contactText="Contact Me"
-            avatarUrl="./assets/ezar.png"
-            showUserInfo={true}
-            enableTilt={true}
-            enableMobileTilt={false}
-            onContactClick={() => console.log("Contact clicked")}
-          />
+
+        {/* Kolom Kanan: Profile Card */}
+        {/* Tambahkan py-10 di mobile agar glow tidak terpotong atau menabrak teks */}
+        <div className="relative w-full flex justify-center md:justify-end md:ml-auto animate__animated animate__fadeInUp animate__delay-4s py-10 md:py-0 order-2 md:order-2 z-0">
+            {/* Wrapper ini memastikan card tetap ditengah di mobile */}
+            <div className="relative scale-90 md:scale-100"> 
+              <ProfileCard
+                name="Ezar Hardin W"
+                title="Fullstack Developer"
+                handle="ezarwiratama"
+                status="Online"
+                contactText="Contact Me"
+                avatarUrl="./assets/ezar.png"
+                showUserInfo={true}
+                enableTilt={true}
+                enableMobileTilt={false} // Pastikan tilt mati di mobile biar ga aneh
+                onContactClick={() => console.log("Contact clicked")}
+              />
+            </div>
         </div>
       </div>
     </>
