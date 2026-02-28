@@ -61,7 +61,7 @@ export default function HeroSection() {
           <div className="flex flex-col sm:flex-row items-center gap-4 justify-center md:justify-start">
             {/* Download CV */}
             <a
-              href="./assets/CV.pdf"
+              href="/assets/CV-Kreatif_Ezar Hardin Wiratama.pdf"
               className="group flex items-center justify-center gap-3 font-semibold bg-[#1a1a1a] p-3 px-6 rounded-full border border-gray-700 hover:bg-[#222] hover:border-gray-500 transition-all active:scale-95 w-full sm:w-auto"
             >
               <HiOutlineDocumentText className="text-xl text-white group-hover:text-gray-300 transition-colors" />
